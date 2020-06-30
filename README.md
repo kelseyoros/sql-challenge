@@ -8,9 +8,10 @@ This challenge consists of 2 parts:
 	* Created a table schema for each of the six CSV files
 	* Import each CSV file into the corresponding SQL table.
 
-<img src="https://github.com/kelseyoros/sql-challenge/blob/master/images/QuickDBD-export.png" width="700">
+<img src="https://github.com/kelseyoros/sql-challenge/blob/master/images/QuickDBD-export.png" width="800">
 
-```CREATE TABLE DEPARTMENTS (
+```
+CREATE TABLE DEPARTMENTS (
     dept_no VARCHAR   NOT NULL,
     dept_name VARCHAR   NOT NULL,
     CONSTRAINT pk_DEPARTMENTS PRIMARY KEY (
@@ -29,7 +30,8 @@ This challenge consists of 2 parts:
 	* List all employees in the Sales and Development departments, including their employee number, last name, first name, and department name.
 	* In descending order, list the frequency count of employee last names, i.e., how many employees share each last name.
 
-```SELECT
+```
+SELECT
    e.emp_no,
    e.last_name,
    e.first_name,
@@ -43,7 +45,8 @@ WHERE d.dept_name = 'Sales' OR d.dept_name='Development';
 ```
 
 
-```SELECT last_name, COUNT(last_name)
+```
+SELECT last_name, COUNT(last_name)
 FROM employees
 GROUP BY last_name
 ORDER BY COUNT(last_name) DESC;
