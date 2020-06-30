@@ -8,7 +8,7 @@ This challenge consists of 2 parts:
 	* Created a table schema for each of the six CSV files
 	* Import each CSV file into the corresponding SQL table.
 
-<img src="https://github.com/kelseyoros/sql-challenge/blob/master/images/QuickDBD-export.png" width="400">
+<img src="https://github.com/kelseyoros/sql-challenge/blob/master/images/QuickDBD-export.png" width="700">
 
 ```CREATE TABLE DEPARTMENTS (
     dept_no VARCHAR   NOT NULL,
@@ -16,7 +16,8 @@ This challenge consists of 2 parts:
     CONSTRAINT pk_DEPARTMENTS PRIMARY KEY (
         dept_no
      )
-);```
+);
+```
 
 2. Data Analysis (Queries)
 	* List the following details of each employee: employee number, last name, first name, gender, and salary.
@@ -38,10 +39,12 @@ JOIN dept_emp AS d_e
 	ON e.emp_no = d_e.emp_no
 JOIN departments AS d
 	ON d_e.dept_no = d.dept_no
-WHERE d.dept_name = 'Sales' OR d.dept_name='Development';```
+WHERE d.dept_name = 'Sales' OR d.dept_name='Development';
+```
 
 
 ```SELECT last_name, COUNT(last_name)
 FROM employees
 GROUP BY last_name
-ORDER BY COUNT(last_name) DESC;```
+ORDER BY COUNT(last_name) DESC;
+```
